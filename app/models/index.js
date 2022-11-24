@@ -38,10 +38,10 @@ db.user.belongsToMany(db.role, {
   foreignKey: "userId",
   otherKey: "roleId"
 });
-db.refreshToken.belongsTo(db.user, {
+db.refreshToken.belongsTo(db.user, { // v1.1.0
   foreignKey: 'userId', targetKey: 'id'
 });
-db.user.hasOne(db.refreshToken, {
+db.user.hasOne(db.refreshToken, { // v1.1.0
   foreignKey: 'userId', targetKey: 'id'
 });
 
