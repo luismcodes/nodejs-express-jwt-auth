@@ -100,7 +100,7 @@ exports.signin = (req, res) => {
     });
 };
 
-exports.refreshToken = async (req, res) => {
+exports.refreshToken = async (req, res) => { // v1.1.0
   const { refreshToken: requestToken } = req.body;
 
   if (requestToken == null) {
